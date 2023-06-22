@@ -1,0 +1,54 @@
+<diagram program="umletino" version="15.1"><zoom_level>10</zoom_level><help_text>Space for diagram notes&lt;&lt;Stereotype&gt;&gt;
+Package::FatClass
+{Some Properties}
+--
+-id: Long
+_-ClassAttribute: Long_
+--
+#Operation(i: int): int
+/+AbstractOperation()/
+--
+Responsibilities
+-- Resp1
+*-- Resp2*</help_text><element><id>UMLClass</id><coordinates><x>310</x><y>0</y><w>210</w><h>140</h></coordinates><panel_attributes>setup
+--
+- piso_new:piso               
+- antagonista_new:antagonista 
++ protagonista_new:protagonista
++ puntos:Number                
++ puntos_box_new:puntos_box
+--
++ setup()
++ actualiza_puntos(e:Event)
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>50</x><y>150</y><w>210</w><h>190</h></coordinates><panel_attributes>protagonista
+--
+- vel: int                         
+- der: Boolean                     
+- izq: Boolean                     
+- limite_x_der: int                
+- limite_x_izq: int
+--
++ protagonista()                   
+- motor(e: Event)                  
++ control()                        
++ key_down(e: KeyboardEvent): void 
++ key_up(e: KeyboardEvent): void</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>310</x><y>220</y><w>210</w><h>220</h></coordinates><panel_attributes>antagonista 
+--
++ vel: Number                      
+- limite_der: int                   
+- limite_izq: int                   
+- dir: Number                       
+- cambia: Timer                     
+- tipos: Number                     
+- lanzar: Timer 
+--
++ antagonista()                    
+- lanza_bala(TimerEvent)            
+- cambio_dir(e: TimerEvent)         
+- actualiza(e: Event)               
++ masvel(e: Event)</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>550</x><y>150</y><w>210</w><h>80</h></coordinates><panel_attributes> bala
+--
+- vel: Number 
+--
++ bala(pos_x, pos_y)
+- mover(e: Event)</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>140</x><y>50</y><w>180</w><h>120</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes><additional_attributes>10;100;10;10;160;10</additional_attributes></element><element><id>Relation</id><coordinates><x>520</x><y>50</y><w>150</w><h>120</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes><additional_attributes>130;100;130;10;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>400</x><y>130</y><w>30</w><h>110</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;90;10;10</additional_attributes></element></diagram>
